@@ -1,0 +1,6 @@
+/* App.css reset since we are using index.css as the global style provider */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
