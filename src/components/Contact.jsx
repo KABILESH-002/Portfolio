@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import html2pdf from 'html2pdf.js';
 
 const Contact = () => {
     const [terminalLines, setTerminalLines] = useState([]);
@@ -56,42 +55,8 @@ const Contact = () => {
 
     const handleDownloadCV = (e) => {
         e.preventDefault();
-        const element = document.createElement('div');
-        element.innerHTML = `
-      <div style="font-family: Arial, sans-serif; padding: 40px; color: #333;">
-        <h1 style="color: #00F3FF; margin-bottom: 10px;">Kabileshwar Kumuthavannan</h1>
-        <p style="font-weight: bold; margin-bottom: 20px;">BSc (Hons) Computer Science Student</p>
-        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 30px;">
-        <div style="margin-bottom: 30px;">
-          <h2 style="color: #666; font-size: 18px; margin-bottom: 15px;">EDUCATION</h2>
-          <p><strong>BSc (Hons) Computer Science</strong> (2022 - Present)<br>IIT Sri Lanka & University of Westminster, UK</p>
-        </div>
-        <div style="margin-bottom: 30px;">
-          <h2 style="color: #666; font-size: 18px; margin-bottom: 15px;">TECHNICAL SKILLS</h2>
-          <p>React, JavaScript, Python, Java, Figma, UI/UX Design, Firebase, Node.js, MySQL</p>
-        </div>
-        <div style="margin-bottom: 30px;">
-          <h2 style="color: #666; font-size: 18px; margin-bottom: 15px;">CONTACT</h2>
-          <p>Email: kabieshking02@gmail.com<br>Phone: +94786322193<br>Location: colombo, sri lanka</p>
-        </div>
-      </div>
-    `;
-
-        const opt = {
-            margin: 0,
-            filename: 'Kabileshwar_CV.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-        };
-
-        html2pdf().set(opt).from(element).save().catch(err => {
-            console.error('PDF Generation failed, falling back to printer:', err);
-            const win = window.open('', '_blank');
-            win.document.write(element.innerHTML);
-            win.document.close();
-            win.print();
-        });
+        // Open the CV in a new window for viewing and downloading
+        window.open('/assets/resume.html', '_blank');
     };
 
     const handleSendTransmission = () => {
