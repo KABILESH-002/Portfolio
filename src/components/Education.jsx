@@ -3,7 +3,7 @@ import React from 'react';
 const Education = () => {
     const educationData = [
         {
-            year: '2022 - PRESENT',
+            year: '2025 - PRESENT',
             degree: 'BSc (Hons) Computer Science',
             institution: 'Informatics Institute of Technology (IIT) Sri Lanka',
             location: 'Colombo, Sri Lanka',
@@ -13,8 +13,8 @@ const Education = () => {
             cardClass: ''
         },
         {
-            year: '2022 - PRESENT',
-            degree: 'BSc (Hons) Computer Science',
+            year: '2024 May - 2024 November',
+            degree: 'BSc (Hons) Computer Science (Foundation)',
             institution: 'University of Westminster',
             location: 'London, UK (Remote/Dual)',
             tags: ['Systems Design', 'Web Dev', 'Java'],
@@ -24,11 +24,11 @@ const Education = () => {
             tagClass: 'lime-tag'
         },
         {
-            year: 'GRADUATED 2021',
+            year: 'GRADUATED 2023',
             degree: 'Secondary Education',
-            institution: 'Gateway College Colombo',
-            location: 'Colombo, Sri Lanka',
-            tags: ['Mathematics', 'Physics', 'Computer Science'],
+            institution: 'T/ St/ Josephs College',
+            location: 'Trincomalee, Sri Lanka',
+            tags: ['Mathematics', 'Physics', 'Cheistry'],
             badge: 'AL COMPLETED',
             dotClass: 'white-node',
             cardClass: 'white-card',
